@@ -49,7 +49,9 @@ const inventors = [
 
   
 
-  // Array.prototype.filter()
+// Exercise 1
+
+// Array.prototype.filter()
 
 // 1. Filter the array of inventors into a new array containing only the inventors born in the 1500's.
 
@@ -72,6 +74,8 @@ console.log('Exercise 1 Correct Result: ',
         { first: 'Johannes', last: 'Kepler', year: 1571, passed: 1630 }
     ]
 )
+
+// Exercise 2
 
 // Array.prototype.map()
 
@@ -108,6 +112,8 @@ console.log('Exercise 2 Correct Result: ',
     ]
 )
 
+// Exercise 3
+
 // Array.prototype.sort()
 
 // 3. Sort the inventors by birth date in ascending order (from those born furthest in the past to those born most recently).
@@ -136,6 +142,30 @@ console.log('Exercise 3 Correct Result: ',
         { first: 'Katherine', last: 'Blodgett', year: 1898, passed: 1979 }
     ]
 )
+
+// Exercise #4
+
+// Array.prototype.find()
+
+// 4. Use Array.prototype.find() to identify the inventor with the first name 'Ada' from an array of inventor objects
+
+// - You have an array of objects, each representing an inventor with various properties including their first name.
+// -  Utilize the Array.prototype.find() method to locate the object for the inventor named 'Ada'.
+// -  Assign the found inventor object to the variable 'inventorNamedAda'
+
+let inventorNamedAda = {}
+
+// Enter you solution code here:
+
+inventorNamedAda = inventors.find(inventors => inventors.first == "Ada")
+
+// Check your return value:
+console.log('Exercise 4 My Result: ', inventorNamedAda)
+console.log('Exercise 4 Correct Result: ', { first: 'Ada', last: 'Lovelace', year: 1815, passed: 1852 })
+
+
+
+// Exercise #5
 
 // Array.prototype.map()
 
@@ -201,6 +231,8 @@ console.log('Exercise 5 Correct Result: ',
     ]
 )
 
+// Exercise 6
+
 // Array.prototype.some()
 
 // 6. Determine if there is at least one person in the devs array who is 18 years old or older.
@@ -213,17 +245,19 @@ let isAdultPresent = null
 
 // Enter your solution code here:
 
+isAdultPresent = devs.some(dev => (new Date().getFullYear() - dev.year) >= 18);
+
 // let isAdultPresent = devs.some(person => {
 //   const currentYear = new Date().getFullYear();
 //   return currentYear - person.year >= 18;
-
-isAdultPresent = devs.some(dev => (new Date().getFullYear() - dev.year) >= 18);
-
 
 // Check your return value:
 console.log('Exercise 6 My Result: ', isAdultPresent)
 console.log('Exercise 6 Correct Result: ', true)
 
+
+
+// Exercise 7
 
 // Array.prototype.every()
 
@@ -246,6 +280,9 @@ console.log('Exercise 7 Correct Result: ', false)
 
 // Array.prototype.find()
 
+
+// Exercise 8
+
 // 8. Use Array.prototype.find() to identify and retrieve the comment object with a specific ID 823423 from an array of comment objects.
 
 // - Assign the found comment object to the variable 'commentById'.
@@ -261,6 +298,8 @@ commentById = comments.find(comment => comment.id === 823423);
 console.log('Exercise 8 My Result: ', commentById)
 console.log('Exercise 8 Correct Result: ', { text: 'Super good', id: 823423 })
 
+
+// Exercise 9 
 
 // Array.prototype.findIndex()
 
